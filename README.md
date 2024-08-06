@@ -3,6 +3,8 @@ A simple Scala tool to handle running the PHILIP MIX parsimony program and gener
 
 ## Building
 
+### Scala and `sbt`
+
 TreeUtils can be built with Scala and [sbt](https://www.scala-sbt.org/). To build the executable you'll need to run:
 
 ```
@@ -14,6 +16,28 @@ This should make an executable jar file in the subdirectory:
 ```
 ./target/scala-2.12/TreeUtils-assembly-1.4.jar
 ```
+
+### Gradle
+
+TreeUtils can also be built with [Gradle](https://gradle.org), a popular tool for building JVM projects. Under UNIX-Like operating systems, you may:
+
+```shell
+./gradlew shadowJar
+```
+
+or, on Microsoft Windows:
+
+```shell
+gradlew.bat shadowJar
+```
+
+The executable jar file should be located at:
+
+```
+build/libs/TreeUtils-all.jar
+```
+
+**Note:** There's no need to install Gradle onto your computer! Gradle wrapper scripts (`gradlew` and `gradlew.bat`) will automatically download Gradle and Scala Toolchains for you. However, a Java Runtime Environment (JRE) is still necessary.
 
 ## Tree building script:
 
